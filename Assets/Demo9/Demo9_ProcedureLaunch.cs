@@ -1,9 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using GameFramework;
-using GameFramework.Event;
-using GameFramework.Procedure;
-using UnityEngine;
+﻿using GameFramework.Procedure;
 using UnityGameFramework.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
 
@@ -11,7 +6,7 @@ public class Demo9_ProcedureLaunch : ProcedureBase
 {
     private bool m_ResourceInitComplete = false;
 
-    protected override void OnEnter (ProcedureOwner procedureOwner)
+    protected override void OnEnter(ProcedureOwner procedureOwner)
     {
         base.OnEnter(procedureOwner);
 
@@ -19,12 +14,13 @@ public class Demo9_ProcedureLaunch : ProcedureBase
             = UnityGameFramework.Runtime.GameEntry.GetComponent<ResourceComponent>();
 
         // 初始化资源
-        Resource.InitResources(() => {
+        Resource.InitResources(() =>
+        {
             OnResourceInitComplete();
         });
     }
 
-    protected override void OnUpdate (ProcedureOwner procedureOwner, float elapseSeconds, float realElapseSeconds)
+    protected override void OnUpdate(ProcedureOwner procedureOwner, float elapseSeconds, float realElapseSeconds)
     {
         base.OnUpdate(procedureOwner, elapseSeconds, realElapseSeconds);
 
@@ -43,7 +39,7 @@ public class Demo9_ProcedureLaunch : ProcedureBase
         ChangeState<Demo9_ProcedureMenu>(procedureOwner);
     }
 
-    private void OnResourceInitComplete ()
+    private void OnResourceInitComplete()
     {
         m_ResourceInitComplete = true;
 

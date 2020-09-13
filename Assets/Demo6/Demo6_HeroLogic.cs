@@ -1,4 +1,3 @@
-using GameFramework;
 using UnityGameFramework.Runtime;
 
 /// <summary>
@@ -10,8 +9,9 @@ public class Demo6_HeroLogic : EntityLogic
     {
     }
 
-    protected override void OnShow (object userData) {
-        base.OnShow (userData);
+    protected override void OnShow(object userData)
+    {
+        base.OnShow(userData);
 
         Log.Debug("显示英雄实体.");
     }

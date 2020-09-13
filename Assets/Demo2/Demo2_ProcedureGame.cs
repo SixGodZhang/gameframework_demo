@@ -5,6 +5,7 @@ using GameFramework.Procedure;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
+
 public class Demo2_ProcedureGame : ProcedureBase
 {
     protected override void OnEnter (ProcedureOwner procedureOwner)

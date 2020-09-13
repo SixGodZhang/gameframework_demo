@@ -1,13 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using GameFramework;
-using GameFramework.Procedure;
-using UnityEngine;
+﻿using GameFramework.Procedure;
 using UnityGameFramework.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
+
 public class Demo2_ProcedureMenu : ProcedureBase
 {
-    protected override void OnEnter (ProcedureOwner procedureOwner)
+    protected override void OnEnter(ProcedureOwner procedureOwner)
     {
         base.OnEnter(procedureOwner);
 
